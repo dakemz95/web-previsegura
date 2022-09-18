@@ -190,8 +190,8 @@ export default {
         window.scrollTo(0,80);
       } else {
         const data = {
-          firstname: this.form.firstname,
-          lastname: this.form.lastname,
+          firstnames: this.form.firstname,
+          lastnames: this.form.lastname,
           email: this.form.mail,
           phone_number: this.form.phone,
           client: this.form.client,
