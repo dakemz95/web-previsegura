@@ -1,0 +1,46 @@
+* {
+  color: #2f2f2f;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+li {
+  
+  &::marker {
+    color: $primary;
+  }
+}
+
+p, li {
+  > span {
+    font-weight: bold;
+  }
+}
+
+body {
+  padding-top: 12vh;
+}
+
+.overlay {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.252);
+}
+
+.main--container {
+  padding: 5vh;
+}
+
+.bg--secondary {
+  background: linear-gradient(180deg, #F0FAF2 0%, #FAFDFF 100%);
+}
