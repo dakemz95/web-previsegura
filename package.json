@@ -16,7 +16,6 @@
     "vue3-carousel": "^0.1.46"
   },
   "devDependencies": {
-    "@quasar/vite-plugin": "^1.2.1",
     "@vitejs/plugin-vue": "^3.0.3",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.16",
