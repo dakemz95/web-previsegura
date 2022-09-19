@@ -43,7 +43,7 @@
     <div class="about">
       <div class="about--img">
         <ImgFrame>
-          <img class="customimg" src="src\assets\img\about_us.png"/>
+          <img class="customimg" src="/src/assets/img/about_us.png"/>
         </ImgFrame>
       </div>
       <div class="about--body">
