@@ -24,10 +24,10 @@
         </div>
       </div>
       <div class="welcome--carousel">
-        <Carousel  :items-to-show="isMobile ? 1.25 : isTablet ? 2.25 : 1.75" :autoplay="4000" snapAlign="left" :wrapAround="true">
+        <Carousel  :items-to-show="isMobile ? 1 : isTablet ? 2.25 : 1.75" :autoplay="4000" snapAlign="left" :wrapAround="true">
           <slide v-for="item in carouselItems" :key="item.text">
             <router-link :to="{name: item.url}">
-              <div class="card" :style="`background-image: url('/src/assets/img/${item.photo}');`">
+              <div class="card" :style="`background-image: url('${item.photo}');`">
                 <span class="card--title">{{item.text}}</span>
               </div>
             </router-link>
@@ -135,12 +135,12 @@
       <h2 class="title text--secondary">Servicios</h2>
       <div class="services--cards">
         <router-link to="/asistencias">
-          <div class="card" style="background-image: url('src/assets/img/asistencias.png');">
+          <div class="card" :style="`background-image: url(${serviceAssistant});`">
             <h4 class="card--title">Asistencias</h4>
           </div>
         </router-link>
         <router-link :to="{name: 'CallCenter'}">
-          <div class="card" style="background-image: url('src/assets/img/call-center2.png');">
+          <div class="card" :style="`background-image: url(${serviceCalcenter});`">
             <h4 class="card--title">Call Center</h4>
           </div>
         </router-link>
@@ -155,33 +155,40 @@ import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import useWindowWidth from '../helpers/useWindowWidth'
 import ImgFrame from '../components/ImgFrame.vue'
+import carrMourtary from '../assets/img/asistencia-funeraria.png'
+import carrGrief from '../assets/img/asistencia-duelo.png'
+import carrMedical from '../assets/img/asistencia-medica.png'
+import carrDates from '../assets/img/citas-medicas.png'
+import carrDental from '../assets/img/asistencia-odontologica.png'
+import serviceAssistant from '../assets/img/asistencias.png'
+import serviceCalcenter from '../assets/img/call-center2.png'
 
 const { isMobile, isTablet } = useWindowWidth()
 
 const carouselItems = ref([
   { 
     text: 'Asistencia funeraria nacional e internacional',
-    photo: 'asistencia-funeraria.png',
+    photo: carrMourtary,
     url: 'AMortuary'
   },
   { 
     text: 'Asistencia financiera en duelo',
-    photo: 'asistencia-duelo.png',
+    photo: carrGrief,
     url: 'AGrief'
   },
   { 
     text: 'Asistencia médica telfónica y domiciiaria',
-    photo: 'asistencia-medica.png',
+    photo: carrMedical,
     url: 'AMedical'
   },
   { 
     text: 'Citas médicas',
-    photo: 'citas-medicas.png',
+    photo: carrDates,
     url: 'AMedicalDates'
   },
   { 
     text: 'Asistencia odontológica',
-    photo: 'asistencia-odontologica.png',
+    photo: carrDental,
     url: 'ADental'
   },
   // { 
@@ -193,6 +200,11 @@ const carouselItems = ref([
   //   photo: 'asistencia-financiera2.png',
   // },
 ])
+
+const serviceImg = ref({
+  assistantPhoto: serviceAssistant,
+  callCenterPhoto: serviceCalcenter
+})
 
 </script>
 
@@ -301,6 +313,7 @@ const carouselItems = ref([
 
       &--title {
         text-align: center;
+        font-size: 5vh;
       }
 
       &--body p {
@@ -384,6 +397,7 @@ const carouselItems = ref([
 
     &--title {
       text-align: center;
+      font-size: 5vh;
     }
 
     &--list {
@@ -458,7 +472,14 @@ const carouselItems = ref([
         }
       }
     }
+    @media screen and (max-width: 780px) {
+     
+      .title {
+        font-size: 5vh;
+      }
+    }
   }
+
 }
 
 #services {
@@ -495,13 +516,17 @@ const carouselItems = ref([
     @media screen and (max-width: 780px) {
       &--cards {
         flex-direction: column;
-
+        padding-inline: 0;
+        
         .card {
+          box-sizing: border-box;
           width: 100%;
         }
       }
+      .title {
+        font-size: 5vh;
+      }
     }
   }
-
 }
 </style>
