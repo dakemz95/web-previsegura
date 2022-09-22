@@ -14,8 +14,8 @@
           la previsión y emergencias familiares en las áreas de <span class="text--secondary">salud y funeraria</span>.
         </p>
         <div class="welcome--cta">
-          <router-link to="/contacto"><button class="btn">CONSULTA TU PLAN</button></router-link>
-          <router-link to="/contacto"><button class="btn">SOLICITUD DE APLICACIÓN</button></router-link>
+          <router-link to="/contacto"><button class="btn">Consulta tu plan</button></router-link>
+          <router-link to="/contacto"><button class="btn">Solicitud de afiliación</button></router-link>
         </div>
         <div class="welcome--social">
           <a href="https://www.instagram.com/grupoprevisegura/?hl=es" target="_blank">
@@ -26,10 +26,8 @@
       <div class="welcome--carousel">
         <Carousel  :items-to-show="isMobile ? 1 : isTablet ? 2.25 : 1.75" :autoplay="4000" snapAlign="left" :wrapAround="true">
           <slide v-for="item in carouselItems" :key="item.text">
-            <router-link :to="{name: item.url}">
-              <div class="card" :style="`background-image: url('${item.photo}');`">
-                <span class="card--title">{{item.text}}</span>
-              </div>
+            <router-link :to="{name: item.url}" class="card" :style="`background-image: url('${item.photo}');`">
+              <span class="card--title">{{item.text}}</span>
             </router-link>
           </slide>
           <template #addons>
@@ -228,6 +226,7 @@ const serviceImg = ref({
     &--contact {
       text-align: right;
       padding-bottom: 1.5vh;
+      margin-block: 5vh;
       
       h5 {
         margin: 0;
@@ -244,6 +243,7 @@ const serviceImg = ref({
     &--cta {
       display: flex;
       gap: 20px;
+      margin-block: 7vh;
 
       .btn {
         background-color: $secondary;
@@ -277,7 +277,7 @@ const serviceImg = ref({
 
       .card {
         height: 60vh;
-        width: 260px;
+        width: 25vw;
         position: relative;
         background-repeat: no-repeat;
         background-size: cover;
@@ -302,13 +302,24 @@ const serviceImg = ref({
     align-self: stretch;
   }
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1024px) {
     .welcome {
       align-items: center;
       flex-direction: column;
 
+      &--contact {
+        text-align: center;
+      }
+
       &--body, &--carousel {
         max-width: 100%;
+      }
+
+      &--carousel {
+        margin-top: 5vh;
+        .card {
+          width: 35vw;
+        }
       }
 
       &--title {
@@ -339,12 +350,17 @@ const serviceImg = ref({
     }
   }
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 640px) {
     .welcome {
 
       &--cta {
         flex-direction: column;
         align-items: center;
+      }
+      &--carousel {
+        .card {
+          width: 80%;
+        }
       }
     }
   }
@@ -408,6 +424,13 @@ const serviceImg = ref({
       }
       ul:last-of-type {
         margin-top: 0;
+      }
+    }
+    &--img {
+      margin-top: 5vh;
+
+      img {
+        width: 100%;
       }
     }
   }

@@ -90,7 +90,7 @@
         </div>
       </div>
       <div class="contact--row center">
-        <button class="contact--btn">Solicitar</button>
+        <button :disabled="hasErrors" class="contact--btn">Solicitar</button>
       </div>
     </form>
   </div>
@@ -167,10 +167,10 @@ export default {
     phoneError() { return this.form.phone.length < 1 && this.showErrors },
     mailError() { return this.form.mail.length < 1 && this.showErrors },
     hasErrors() {
-      return this.firstnameError &&
-        this.lastnameError &&
-        this.identificationError &&
-        this.phoneError &&
+      return this.firstnameError ||
+        this.lastnameError ||
+        this.identificationError ||
+        this.phoneError ||
         this.mailError           
     },
     selectedAssistances() {
@@ -193,14 +193,33 @@ export default {
           firstnames: this.form.firstname,
           lastnames: this.form.lastname,
           email: this.form.mail,
+          identification: this.form.identification,
           phone_number: this.form.phone,
           client: this.form.client,
           plan_id: this.form.plan,
           assistances: this.selectedAssistances
         }
-        console.log(data)
         this.showErrors = false
         axios.post(`${this.API_URL}/petition/save`, data)
+        .then( res => {
+          this.form.firstname = ''
+          this.form.lastname = ''
+          this.form.mail = ''
+          this.form.identification = ''
+          this.form.phone = ''
+          this.form.client = null
+          this.form.plan_id = null
+          this.form.mortuary = false
+          this.form.grief = false
+          this.form.medical = false
+          this.form.medicalDates = false
+          this.form.dental = false
+          this.form.showErrors = false
+          window.alert('Se ha procesado su solicitud.')
+        })
+        .catch(err => {
+          window.alert('Ha ocurrido un error al enviar sus datos, inténtelo nuevamente.')
+        })
       }
     }
   }
@@ -229,7 +248,7 @@ $secondary: #30AC67;
   }
   &--subtitle {
     margin-top: 7.2vh;
-    font-size: 2.5vh;
+    font-size: 2vh;
     padding-right: 2vh;
     display: flex;
     flex-direction: column;
@@ -294,6 +313,7 @@ $secondary: #30AC67;
     span {
       margin-top: -4vh;
       color: #f93154;
+      font-size: 1.5vh;
     }
   }
   input[type="text"],
@@ -305,7 +325,7 @@ $secondary: #30AC67;
     width: auto;
     height: 6.8vh;
     padding: 0.8vh 1.6vh;
-    font-size: 2.4vh;
+    font-size: 2vh;
     border: 1px solid #bbbbbb;
     border-radius: .8vh;
     transition: all .1s;
@@ -343,8 +363,13 @@ $secondary: #30AC67;
   .mt-3 {
     margin-top: 3vh;
   }
-  @media screen and (max-width: 720px) {
+
+  @media screen and (max-width: 1024px) {
     margin-inline: 0;
+    
+  }
+
+  @media screen and (max-width: 720px) {
     &--container {
       flex-direction: column;
       align-items: center;
@@ -357,9 +382,18 @@ $secondary: #30AC67;
     }
     &--title {
       text-align: center;
+      margin-bottom: 6vh;
+    }
+    &--subtitle {
+      // margin-top: 4vh;
     }
     &--row {
       flex-direction: column;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      height: 5vh;
     }
     input[type="text"],
     input[type="tel"],
