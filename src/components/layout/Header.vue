@@ -1,37 +1,35 @@
 <template>
   <div class="header">
     <img class="header--logo" src="../../assets/img/logo.png" alt="logo previsegura">
-    <div>
-      <ul v-if="!isMobile && !isTablet" class="nav">
-        <li class="nav--item"><router-link class="nav--link" to="/">Home</router-link></li>
-        <li class="nav--item"><router-link class="nav--link" :to="{ path: '/', hash: '#quienes-somos' }" exact-active-class='' active-class=''>Quiénes somos</router-link></li>
-        <li class="nav--item"><router-link class="nav--link" to="/asistencias" :class="$route.path.includes('asistencias') ? 'active' : '' ">Asistencias</router-link></li>
-        <li class="nav--item"><router-link class="nav--link" to="/call-center">Call Center</router-link></li>
-        <li class="nav--item"><router-link class="nav--link" to="/contacto">Contacto</router-link></li>
-      </ul>
-      <div v-else>
-        <button class="nav--btn"  @click="showMenu = true">
-          <img class="nav--btn_img" src="../../assets/img/bars.png">
+    <ul v-if="!isMobile && !isTablet" class="nav">
+      <li class="nav--item"><router-link class="nav--link" to="/">Home</router-link></li>
+      <li class="nav--item"><router-link class="nav--link" :to="{ path: '/', hash: '#quienes-somos' }" exact-active-class='' active-class=''>Quiénes somos</router-link></li>
+      <li class="nav--item"><router-link class="nav--link" to="/asistencias" :class="$route.path.includes('asistencias') ? 'active' : '' ">Asistencias</router-link></li>
+      <li class="nav--item"><router-link class="nav--link" to="/call-center">Call Center</router-link></li>
+      <li class="nav--item"><router-link class="nav--link" to="/contacto">Contacto</router-link></li>
+    </ul>
+    <div v-else>
+      <button class="nav--btn"  @click="showMenu = true">
+        <img class="nav--btn_img" src="../../assets/img/bars.png">
+      </button>
+      <div :class="`${showMenu ? 'show' : ''} nav--container`">
+        <button class="nav--btn" @click="showMenu = false">
+          <img class="nav--btn_img" src="../../assets/img/close.png">
         </button>
-        <div :class="`${showMenu ? 'show' : ''} nav--container`">
-          <button class="nav--btn" @click="showMenu = false">
-            <img class="nav--btn_img" src="../../assets/img/close.png">
-          </button>
-          <ul class="nav--mobile">
-            <li class="nav--item"><router-link class="nav--link" to="/">Home</router-link></li>
-            <li class="nav--item"><router-link class="nav--link" :to="{ path: '/', hash: '#quienes-somos' }" exact-active-class='' active-class=''>Quiénes somos</router-link></li>
-            <li class="nav--item"><router-link class="nav--link" to="/asistencias">Asistencias</router-link></li>
-            <li class="nav--item"><router-link class="nav--link" to="/call-center">Call Center</router-link></li>
-            <li class="nav--item"><router-link :class="`nav--link ${route.path.includes('/contacto') ? 'active' : ''}`" to="/contacto">Contacto</router-link></li>
-          </ul>
-          <div class="nav--footer">
-            
-          </div>
+        <ul class="nav--mobile">
+          <li class="nav--item"><router-link class="nav--link" to="/">Home</router-link></li>
+          <li class="nav--item"><router-link class="nav--link" :to="{ path: '/', hash: '#quienes-somos' }" exact-active-class='' active-class=''>Quiénes somos</router-link></li>
+          <li class="nav--item"><router-link class="nav--link" to="/asistencias">Asistencias</router-link></li>
+          <li class="nav--item"><router-link class="nav--link" to="/call-center">Call Center</router-link></li>
+          <li class="nav--item"><router-link :class="`nav--link ${route.path.includes('/contacto') ? 'active' : ''}`" to="/contacto">Contacto</router-link></li>
+        </ul>
+        <div class="nav--footer">
+          
         </div>
-        <Transition name="fade">
-          <div v-show="showMenu" class="overlay" @click="showMenu = false"></div>
-        </Transition>
       </div>
+      <Transition name="fade">
+        <div v-show="showMenu" class="overlay" @click="showMenu = false"></div>
+      </Transition>
     </div>
   </div>
 </template>
@@ -60,9 +58,9 @@ const showMenu = ref(false)
   right: 0;
   width: auto;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
-  padding: 1.8vh 3vh;
+  padding: 1.8vh 4vh;
   box-shadow: 0 4px 12px #00000012, 0 2px 4px #0000000d;
 
   &--logo {
@@ -73,11 +71,15 @@ const showMenu = ref(false)
 
 
 .nav {
+  width: 100%;
+  margin: auto;
+  justify-content: center;
   list-style: none;
   display: flex;
-  gap: 2vh;
+  gap: 1vh;
   font-weight: 400;
   line-height: 21px;
+  padding: 0;
 
   &--item {
     display: flex;
@@ -113,7 +115,7 @@ const showMenu = ref(false)
     }
 
     &_img {
-      width: 5vh;
+      width: 4vh;
     }
   }
   &.mobile {

@@ -297,7 +297,7 @@ $secondary: #30AC67;
     width: 100%;
   }
   &--label {
-    margin-top: 3vh;
+    margin-top: 1vh;
     font-size: 2vh;
     padding-right: 2vh;
     display: flex;
@@ -305,13 +305,13 @@ $secondary: #30AC67;
     
     p {
       margin-top: 0;
-      margin-bottom: 2vh;
+      margin-bottom: 1vh;
       font-weight: 700;
       color: $primary;
     }
 
     span {
-      margin-top: -4vh;
+      margin-top: -3vh;
       color: #f93154;
       font-size: 1.5vh;
     }
@@ -338,7 +338,7 @@ $secondary: #30AC67;
   }
 
   input {
-    margin-bottom: 4.5vh;
+    margin-bottom: 3.5vh;
 
     &:focus, &:active {
         border-color: $primary;

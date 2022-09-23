@@ -227,10 +227,16 @@ const serviceImg = ref({
       text-align: right;
       padding-bottom: 1.5vh;
       margin-block: 5vh;
+
+      a {
+        font-size: 2.5vh;
+      }
       
       h5 {
         margin: 0;
+        margin-top: 1.4vh;
         font-weight: 400;
+        font-size: 2.2vh;
       }
     }
 
@@ -354,8 +360,12 @@ const serviceImg = ref({
     .welcome {
 
       &--cta {
-        flex-direction: column;
-        align-items: center;
+        gap: 10px;
+
+        .btn {
+          font-size: 1.6vh;
+
+        }
       }
       &--carousel {
         .card {
@@ -367,7 +377,7 @@ const serviceImg = ref({
 }
 
 .about {
-  padding-block: 12vh;
+  padding: 12vh 4vh;
   display: flex;
   align-items: center;
 
@@ -375,12 +385,12 @@ const serviceImg = ref({
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1.8vh;
+    margin-right: 5vh;
     max-width: 50%;
     padding: 2.6vh 3.4vh;
 
     img {
-      width: 40vh;
+      width: 45vh;
     }
   }
   
@@ -401,7 +411,7 @@ const serviceImg = ref({
   }
 
   p, li {
-    font-size: 2.2vh;
+    font-size: 2vh;
   }
 
   li {
@@ -463,8 +473,8 @@ const serviceImg = ref({
 
       .card {
         box-sizing: border-box;
-        max-width: 35vh;
-        padding: 2.4vh;
+        max-width: 40vh;
+        padding: 3.4vh;
         border: 1px solid #D8D8D8;
 
         &--img {
@@ -481,7 +491,7 @@ const serviceImg = ref({
         }
 
         &--body {
-          font-size: 2.2vh;
+          font-size: 2vh;
           padding: 2.4vh;
         }
       }
