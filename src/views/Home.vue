@@ -49,7 +49,7 @@
           Quiénes somos
         </h2>
         <p>
-          Somos un Grupo de Empresas con más de 20 años en comercialización masiva, corporativa. e individual de 
+          Somos un Grupo de Empresas con más de 20 años en comercialización masiva, corporativa e individual de 
           <span class="text--primary">servicios de asistencia</span> 
           para la previsión y emergencias familiares en las áreas de 
           <span class="text--primary">salud y funeraria</span>.

@@ -3,19 +3,19 @@
     <div class="assistance--nav">
       <ul class="nav--list">
         <li><router-link :to="{name: 'AMortuary'}" :class="['nav--item', isActive ? 'active' : '']">
-          ASISTENCIA FUNERARIA NACIONAL E INTERNACIONAL
+          ASISTENCIA FUNERARIA NACIONAL E INTERNACIONAL.
         </router-link></li>
         <li><router-link class="nav--item" :to="{name: 'AGrief'}">
-          ASISTENCIA FINANCIERA EN DUELO
+          ASISTENCIA FINANCIERA EN DUELO.
         </router-link></li>
         <li><router-link class="nav--item" :to="{name: 'AMedical'}">
-          ASISTENCIA MÉDICA TELEFÓNICA Y DOMICILIARIA
+          ASISTENCIA MÉDICA TELEFÓNICA Y DOMICILIARIA.
         </router-link></li>
         <li><router-link class="nav--item" :to="{name: 'AMedicalDates'}">
-          COMBO CITAS MÉDICAS
+          COMBO CITAS MÉDICAS.
         </router-link></li>
         <li><router-link class="nav--item" :to="{name: 'ADental'}">
-          ASISTENCIA ODONTOLÓGICA
+          ASISTENCIA ODONTOLÓGICA.
         </router-link></li>
       </ul>
     </div>
