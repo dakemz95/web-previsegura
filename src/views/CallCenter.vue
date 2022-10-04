@@ -8,7 +8,13 @@
       </div>
       <div class="callcenter--body">
         <h1 class="callcenter--title"><span class="text--primary">Call</span>center</h1>
-        <p>Servicio Inmediato e Integral en <span class="text--secondary">Funerarias, Cementerios o cremación</span> en toda Venezuela y el resto del mundo. Atención 24 horas a través de nuestro call center <span class="text--secondary">0800 ASISTIR</span>. Constante y sensible Acompañamiento al doliente en ese difícil momento.</p>
+        <!-- <p>Servicio Inmediato e Integral en <span class="text--secondary">Funerarias, Cementerios o cremación</span> 
+          en toda Venezuela y el resto del mundo. Atención 24 horas a través de nuestro call center <span class="text--secondary">0800 ASISTIR</span>.
+          Constante y sensible Acompañamiento al doliente en ese difícil momento.</p> -->
+        <p>
+          Nuestros afiliados tienen a su disposición nuestra línea <span class="text--secondary">0800 ASISTIR</span> que es atendida las 24 horas los 365 días del año, 
+          por personal entrenado para dar de manera humana y racional la mejor solución al requerimiento solicitado.
+        </p>
         <div class="callcenter--container">
           <div class="callcenter--col">
             <ul class="callcenter--list">
@@ -23,6 +29,7 @@
             <ul class="callcenter--list">
               <li>Sistemas de telefonía avanzados</li>
               <li>Red inteligente</li>
+              <li>Voz IP.</li>
               <li>Interconexión de redes</li>
               <li>Grabación de llamada</li>
             </ul>
