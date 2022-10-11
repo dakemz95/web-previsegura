@@ -17,6 +17,9 @@
         <li><router-link class="nav--item" :to="{name: 'ADental'}">
           ASISTENCIA ODONTOLÓGICA.
         </router-link></li>
+        <li><router-link class="nav--item" :to="{name: 'AMascotas'}">
+          MASCOTAS DEL CIELO.
+        </router-link></li>
       </ul>
     </div>
     <router-view></router-view>

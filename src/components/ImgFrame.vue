@@ -2,6 +2,7 @@
   <div class="frame">
     <div :class="['box--top', alternate ? 'alternate' : '']"></div>
     <slot></slot>
+    <slot name="custom"></slot>
     <div :class="['box--bottom', alternate ? 'alternate' : '']"></div>
   </div>
 </template>
@@ -10,6 +11,10 @@
 export default {
   props: {
     alternate: {
+      type: Boolean,
+      default: false
+    },
+    mirror: {
       type: Boolean,
       default: false
     }

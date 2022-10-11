@@ -86,6 +86,10 @@
               <input v-model="form.dental" type="checkbox">
               Asistencia odontológica
             </label>
+            <label class="contact--checkbox">
+              <input v-model="form.pets" type="checkbox">
+              Mascotas del cielo
+            </label>
           </div>
         </div>
       </div>
@@ -120,7 +124,8 @@ export default {
         grief: false,
         medical: false,
         medicalDates: false,
-        dental: false
+        dental: false,
+        pets: false,
       },
       planList: [
         {id: 1, name: 'INDIVIDUAL'},
@@ -138,6 +143,7 @@ export default {
         {id:3, name: 'Asistencia médica telefónica y domiciliaria'},
         {id:4, name: 'Combo citas médicas'},
         {id:5, name: 'Asistencia odontológica'},
+        {id:8, name: 'Mascotas del cielo'},
       ],
       showErrors: false
     }
@@ -154,6 +160,8 @@ export default {
         case '4': this.form.medicalDates = true         
           break;
         case '5': this.form.dental = true         
+          break;
+        case '8': this.form.pets = true         
           break;
         default:
           break;
@@ -180,6 +188,7 @@ export default {
       if ( this.form.medical ) list.push(3)
       if ( this.form.medicalDates ) list.push(4)
       if ( this.form.dental ) list.push(5)
+      if ( this.form.dental ) list.push(8)
       return list
     }
   },
@@ -214,6 +223,7 @@ export default {
           this.form.medical = false
           this.form.medicalDates = false
           this.form.dental = false
+          this.form.pets = false
           this.form.showErrors = false
           window.alert('Se ha procesado su solicitud.')
         })

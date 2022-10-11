@@ -6,6 +6,7 @@ import AGrief from '../views/Assists/AGrief.vue'
 import AMedical from '../views/Assists/AMedical.vue'
 import AMedicalDates from '../views/Assists/AMedicalDates.vue'
 import ADental from '../views/Assists/ADental.vue'
+import AMascotas from '../views/Assists/AMascotas.vue'
 import CallCenter from '../views/CallCenter.vue'
 import Contact from '../views/Contact.vue'
 
@@ -66,6 +67,11 @@ export default createRouter({
           path: '/asistencias/asistencias-odontologicas',
           name: 'ADental',
           component: ADental,
+        },
+        {
+          path: '/asistencias/mascotas-del-cielo',
+          name: 'AMascotas',
+          component: AMascotas,
         },
       ]
     },

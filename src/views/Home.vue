@@ -63,6 +63,7 @@
           <ul>
             <li><router-link :to="{name: 'AMedicalDates'}">Combo Citas Médicas.</router-link></li>
             <li><router-link :to="{name: 'ADental'}">Asistencia Odontológica.</router-link></li>
+            <li><router-link :to="{name: 'AMascotas'}">Mascotas del cielo.</router-link></li>
           </ul>
         </div>
         <p>A través de nuestras empresas aliadas y red de servicios permitimos a nuestros afiliados el acceso inmediato a las 
@@ -156,6 +157,7 @@ import ImgFrame from '../components/ImgFrame.vue'
 import carrMourtary from '../assets/img/asistencia-funeraria.png'
 import carrGrief from '../assets/img/asistencia-duelo.png'
 import carrMedical from '../assets/img/asistencia-medica.png'
+import carrMascota from '../assets/img/asistencia_mascotas.png'
 import carrDates from '../assets/img/citas-medicas.png'
 import carrDental from '../assets/img/asistencia-odontologica.png'
 import serviceAssistant from '../assets/img/asistencias.png'
@@ -175,7 +177,7 @@ const carouselItems = ref([
     url: 'AGrief'
   },
   { 
-    text: 'Asistencia médica telfónica y domiciiaria',
+    text: 'Asistencia médica telefónica y domiciiaria',
     photo: carrMedical,
     url: 'AMedical'
   },
@@ -197,6 +199,11 @@ const carouselItems = ref([
   //   text: 'Asistencia financiera en enfermedades graves',
   //   photo: 'asistencia-financiera2.png',
   // },
+  { 
+    text: 'Mascotas del cielo',
+    photo: carrMascota,
+    url: 'AMascotas'
+  },
 ])
 
 const serviceImg = ref({
@@ -282,8 +289,8 @@ const serviceImg = ref({
       overflow: hidden;
 
       .card {
-        height: 60vh;
-        width: 25vw;
+        height: 70vh;
+        width: max(22vw, 300px);
         position: relative;
         background-repeat: no-repeat;
         background-size: cover;
