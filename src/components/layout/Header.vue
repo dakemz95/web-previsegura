@@ -67,6 +67,14 @@ const showMenu = ref(false)
     width: 35vh;
     padding: 1vh;
   }
+
+  @media screen and (max-width: 1024px) {
+    justify-content: space-between;
+
+    &--logo {
+      width: 25vh;
+    }
+  }
 }
 
 
