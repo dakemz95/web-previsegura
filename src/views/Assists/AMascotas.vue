@@ -52,16 +52,22 @@
           manera digna y sensible de la búsqueda y cremación
           de su mascota.
         </p>
+        <h3 class="mortuary--subtitle">Componentes del servicio</h3>
         <ul class="mortuary--list">
-          <li>Ataúd superior</li>
-          <li>Servicio de velación hasta 24 horas</li>
-          <li>Servicios de capilla en funerarias tipo A o B</li>
-          <li>Un (1) traslado a nivel local</li>
-          <li>Una carroza fúnebre</li>
-          <li>Orientación en diligencias de ley, se requiere certificado de defunción gestionado por parte de familiares.</li>
-          <li>Habitación de descanso (sujeto a disponibilidad de la funeraria)</li>
-          <li>Servicio de cafetería.</li>
-          <li>Preparación externa del difunto.</li>
+          <li>Asistencia de cremación y servicio hasta <span class="text--secondary">$ 400,00</span>.</li>
+          <li>
+            Búsqueda de la Mascota a su residencia declarada en la “Planilla de Afiliación”, de
+            8:00 AM A 4:00 PM Área Metropolitana, 3:00 PM La Gran Caracas.
+          </li>
+          <li>Proceso de Cremación.</li>
+          <li>Cenízaro.</li>
+          <li>
+            Entrega del Cenízaro en la residencia declarada antes de 72 horas, después de
+            realizada la cremación.
+          </li>
+          <li>Certificado de cremación.</li>
+          <li>De ser necesario: servicio de custodia y refrigeración.</li>
+          <li>Edad afiliable de 0 a 8 años. (NO APLICA)</li>
         </ul>
         <template v-if="isMobile">
           <h3 class="mortuary--subtitle">Alcance Geográfico</h3>

@@ -129,6 +129,7 @@ const { isMobile, isTablet } = useWindowWidth()
 
       &--logo {
         margin: 1.2vh 0;
+        width: 22vh;
       }
 
       * {

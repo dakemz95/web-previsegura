@@ -17,7 +17,7 @@
           <span class="text--secondary">0800 ASISTIR</span>, 24 horas todos los días del año y su Orden de Atención llegará a su celular vía SMS.
         </p>
         <p class="bold">
-          Aplican periodos de activación. <br />
+          Aplican períodos de activación. <br />
           El afiliado debe estar al día con el pago de sus cuotas para obtener el servicio. <br />
         </p>
       </div>

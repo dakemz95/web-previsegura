@@ -27,7 +27,7 @@
           <li>Planes individuales o grupo familiar</li>
         </ul>
         <p class="bold">
-          Aplican periodos de activación. <br />
+          Aplican períodos de activación. <br />
           El afiliado debe estar al día con el pago de sus cuotas para obtener el servicio.
         </p>
       </div>

@@ -96,7 +96,7 @@
               Inmediatez
             </h4>
             <p class="card--content">
-              Atención rápida y conservicio diligente <span>0800 ASISTIR</span>.
+              Atención rápida y con servicio diligente <span>0800 ASISTIR</span>.
             </p>
           </div>
         </div>
@@ -177,7 +177,7 @@ const carouselItems = ref([
     url: 'AGrief'
   },
   { 
-    text: 'Asistencia médica telefónica y domiciiaria',
+    text: 'Asistencia médica telefónica y domiciliaria',
     photo: carrMedical,
     url: 'AMedical'
   },
