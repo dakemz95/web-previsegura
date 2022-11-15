@@ -3,7 +3,7 @@
     <div class="mortuary--container">
       <div class="mortuary--img">
         <ImgFrame alternate>
-          <img class="customimg" src="../../assets/img/asistencia_mascotas.jfif"/>
+          <img class="customimg" src="../../assets/img/asistencia_mascotas2.jfif"/>
           <template #custom>
             <img class="logo" src="../../assets/img/logo_mascotas.png"/>
           </template>
