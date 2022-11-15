@@ -157,7 +157,7 @@ import ImgFrame from '../components/ImgFrame.vue'
 import carrMourtary from '../assets/img/asistencia-funeraria.png'
 import carrGrief from '../assets/img/asistencia-duelo.png'
 import carrMedical from '../assets/img/asistencia-medica.png'
-import carrMascota from '../assets/img/asistencia_mascotas.jfif'
+import carrMascota from '../assets/img/asistencia_mascotas2.jfif'
 import carrDates from '../assets/img/citas-medicas.png'
 import carrDental from '../assets/img/asistencia-odontologica.png'
 import serviceAssistant from '../assets/img/asistencias.png'
@@ -296,7 +296,7 @@ const serviceImg = ref({
         background-size: cover;
         display: block;
         padding: 2vh;  
-            
+
         &--title {
           font-size: 3.8vh;
           line-height: 1.5;
